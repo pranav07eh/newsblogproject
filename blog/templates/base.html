@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="top-header">
+            <div class="container">
+                <div class="top-header-container">
+                    <div class="top-left">
+                        <ul>
+                            <li><i class="fa fa-phone"></i><a href="tel:+9779803602578"> +9779803602578</a></li>
+                            <li><i class="fa fa-envelope"></i><a href="mailto:info@org.np"> info@org.np</a></li>
+                        </ul>
+                    </div>
+                    <div class="top-right">
+                        <ul>
+                            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                            <li><a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                            <li><a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                            <li><a href="https://www.youtube.com" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="main-header">
+                <div class="logo-section">
+                    <img src="{% static 'images/logo.png' %}" alt="Logo">
+                </div>
+                <div class="search-section">
+                    <input type="search" class="form-control" placeholder="SEARCH">
+                    <button class="button-success">Search</button>
+                </div>
+            </div>
+        </div>    
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="about">ABOUT US</a></li>
+                <li><a href="contact">CONTACT US</a></li>
+                <li><a href="#">NEWS CATEGORY</a>
+                    <ul>
+                        <li><a href="#">POLITICS</a></li>
+                        <li><a href="#">SPORTS</a></li>
+                        <li><a href="#">ENTERTAINMENT</a></li>
+                        <li><a href="#">TECHNOLOGY</a></li>
+                        <li><a href="#">HEALTH</a></li>
+                    </ul>
+                </li>
+                <li><a href="addnews">ADD NEWS</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+    
+</body>
+</html>

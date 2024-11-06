@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<main class="confirm-delete">
+    <div class="container">
+        <h1>Are you sure you want to delete this blog?</h1>
+        <p>Once deleted, the blog cannot be recovered.</p>
+        <form method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-delete">Yes, Delete</button>
+            <a href="{% url 'index' %}" class="btn btn-edit">Cancel</a>
+        </form>
+    </div>
+</main>
+{% endblock %}
